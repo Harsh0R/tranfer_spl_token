@@ -1,0 +1,20 @@
+[features]
+seeds = false
+skip-lint = false
+[programs.devnet]
+# tranfer_spl_token = "F1ipperKF9EfD821ZbbYjS319LXYiBmjhzkkf5a26rC"
+tranfer_spl_token = "564zkJpPojyCmxr5qiaK3LSe7XiXa77DvnaapW5n1qx4"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "/mnt/c/Users/MASTER/Desktop/projects/solana/solana_my_project/tranfer_spl_token/id.json+"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+
+[[test.validator.clone]]
+address = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
