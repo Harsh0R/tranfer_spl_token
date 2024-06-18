@@ -53,6 +53,9 @@ describe("tranfer_spl_token", () => {
       .pdas()
       .metadata({ mint: mintKeypair.publicKey });
 
+      console.log("MEtadata Addrtess===> ", metadataAddress);
+      
+
     // Create the token mint
     const tx = await program.methods
       .createTokenMint(
@@ -126,7 +129,7 @@ describe("tranfer_spl_token", () => {
         },
       ])
       .rpc({ skipPreflight: true });
-    console.log("Wallet PubKey", wallet.publicKey);
+    console.log("My Wallet PubKey", wallet.publicKey);
     console.log("Your transaction signature", tx);
   });
 
@@ -184,7 +187,8 @@ describe("tranfer_spl_token", () => {
     const recepienttokenAmount = (
       await getMultipleAccounts(connection, [receipientTokenAccount.address])
     );
-    console.log("recipient Address => ", recepienttokenAmount[0].publicKey);
+    console.log("Recipient Object => ", recepienttokenAmount);
+    console.log("Recipient Public Address => ", recepienttokenAmount[0].publicKey);
   });
 
 
