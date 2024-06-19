@@ -29,8 +29,8 @@ describe("tranfer_spl_token", () => {
 
 
   // Metadata for the Token
-  const tokenTitle = "HARSH solana tOKEN";
-  const tokenSymbol = "HST";
+  const tokenTitle = "New Token";
+  const tokenSymbol = "NT";
   const tokenUri =
     "https://raw.githubusercontent.com/Harsh0R/solidity-spl-fungible-token/master/spl-token.json";
 

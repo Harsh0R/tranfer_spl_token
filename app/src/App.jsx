@@ -12,6 +12,7 @@ function App() {
                 <h1>Solana Token Management</h1>
                 <Navbar />
                 <MintToken/>
+                {/* <TransferSPLToken/> */}
             </div>
     </ContextProvider>
   )
