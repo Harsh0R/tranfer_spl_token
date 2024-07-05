@@ -3,6 +3,7 @@ import { PublicKey, Transaction, Keypair } from '@solana/web3.js';
 import * as splToken from '@solana/spl-token';
 import * as anchor from '@project-serum/anchor';
 import idl from '../../tranfer_spl_token.json'; // Your IDL JSON file
+// import { Metaplex } from '@metaplex-foundation/js';
 
 const PROGRAM_ID = new PublicKey('564zkJpPojyCmxr5qiaK3LSe7XiXa77DvnaapW5n1qx4');
 const METADATA_PROGRAM_ID = new PublicKey("metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s");
@@ -91,11 +92,11 @@ export const createMintToken = async (event) => {
   try {
     const createMintTransaction = await program.methods
       .createTokenMint(
-        wallet.publicKey, // freeze authority
-        9, // 0 decimals for NFT
-        tokenTitle, // NFT name
-        tokenSymbol, // NFT symbol
-        tokenUri // NFT URI
+        wallet.publicKey,
+        9,
+        tokenTitle, 
+        tokenSymbol, 
+        tokenUri 
       )
       .accounts({
         payer: wallet.publicKey,

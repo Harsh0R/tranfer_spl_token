@@ -5,7 +5,7 @@ import { createMintToken, initialized, mintTo, transferTokens } from '../Context
 import idl from '../../tranfer_spl_token.json'; // Your IDL JSON file
 // import { AnchorProvider } from '@coral-xyz/anchor';
 import { PublicKey, Transaction, Keypair, SYSVAR_RENT_PUBKEY, SystemProgram } from '@solana/web3.js';
-// import { Metaplex } from '@metaplex-foundation/js'
+import { Metaplex } from '@metaplex-foundation/js'
 import { ASSOCIATED_TOKEN_PROGRAM_ID, TOKEN_PROGRAM_ID, getAssociatedTokenAddress, getMint } from "@solana/spl-token";
 
 
